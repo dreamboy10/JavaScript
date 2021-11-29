@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>boolean의 대체재</title>
+</head>
+<body>
+	<script>
+		if(0){
+			alert(1);
+		}
+		if(1){
+			alert(2);
+		}
+
+		if(!''){
+    	alert('빈 문자열')
+		}
+		if(!undefined){
+    	alert('undefined');
+		}
+
+		var a;
+		if(!a){
+    	alert('값이 할당되지 않은 변수'); 
+		}
+		if(!null){
+    	alert('null');
+		}
+		if(!NaN){
+    	alert('NaN');
+		}
+	</script>
+</body>
+</html>

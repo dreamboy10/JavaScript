@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>object2</title>
+</head>
+<body>
+	<script>
+		var grades = {
+			'list' : {'dreamboy' : 10, 'obama' : 8, 
+				'kudo' : 80},
+			'show' : function() {
+				for(var name in this.list) {
+					alert(name, this.list[name]);
+					console.log(name, this.list[name]);
+					document.write(name, this.list[name]+"<br>");
+				}
+			}
+		}
+		grades.show();
+	</script>
+</body>
+</html>

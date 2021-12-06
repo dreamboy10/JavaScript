@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>값으로서 함수와 콜백4</title>
+</head>
+<body>
+	<script>
+		var numbers = [20, 10, 9,8,7,6,5,4,3,2,1];
+		var sortfunc = function(a, b) {
+			return b - a;
+		}
+		alert(numbers.sort(sortfunc));
+		console.log(numbers.sort(sortfunc));
+		document.write(numbers.sort(sortfunc)+"<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>클로저 - private variable</title>
+</head>
+<body>
+	<script>
+		function factory_movie(title){
+    	return {
+        get_title : function (){
+            return title;
+        },
+        set_title : function(_title){
+        	if(typeof _title === 'String') {
+        		title = _title
+        	} else {
+        		alert('제목은 문자열이어야 합니다.');
+        	}
+        }
+    	}
+		}
+		ghost = factory_movie('Ghost in the shell');
+		matrix = factory_movie('Matrix');
+ 
+		alert(ghost.get_title());
+		console.log(ghost.get_title());
+		document.write(ghost.get_title()+"<br>");
+		alert(matrix.get_title());
+		console.log(matrix.get_title());
+		document.write(matrix.get_title()+"<br>");
+ 
+		ghost.set_title('공각기동대');
+ 
+		alert(ghost.get_title());
+		console.log(ghost.get_title());
+		document.write(ghost.get_title()+"<br>");
+		alert(matrix.get_title());
+		console.log(matrix.get_title());
+		document.write(matrix.get_title()+"<br>");
+	</script>
+</body>
+</html>

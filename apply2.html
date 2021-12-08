@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>apply2</title>
+</head>
+<body>
+	<script>
+		o1 = {val1:1, val2:2, val3:3}
+		o2 = {v1:10, v2:50, v3:100, v4:25}
+		function sum(){
+    	var _sum = 0;
+    	for(name in this){
+    		_sum += this[name];
+    	}
+    	return _sum;
+		}
+		alert(sum.apply(o1)); // 6
+		console.log(sum.apply(o1)); // 6
+		document.write(sum.apply(o1)+"<br>"); // 6
+		alert(sum.apply(o2)); // 185
+		console.log(sum.apply(o2)); // 185
+		document.write(sum.apply(o2)+"<br>"); // 185
+	</script>
+</body>
+</html>

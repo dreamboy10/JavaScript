@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>생성자와 new2</title>
+</head>
+<body>
+	<script>
+		/*
+		function Person(){}
+		var p = new Person();
+		p.name = 'dreamboy';
+		p.introduce = function(){
+    	return 'My name is '+this.name; 
+		}
+		alert(p.introduce());
+		console.log(p.introduce());
+		document.write(p.introduce()+"<br>");
+		*/
+
+		/*
+		function Person(){}
+		var p1 = new Person();
+		p1.name = 'dreamboy';
+		p1.introduce = function(){
+    	return 'My name is '+this.name; 
+		}
+		alert(p1.introduce());
+		console.log(p1.introduce());
+		document.write(p1.introduce()+"<br>");
+ 
+		var p2 = new Person();
+		p2.name = 'obama';
+		p2.introduce = function(){
+    	return 'My name is '+this.name; 
+		}
+		alert(p2.introduce());
+		console.log(p2.introduce());
+		document.write(p2.introduce());
+		*/
+
+		function Person(name){
+    	this.name = name;
+    	this.introduce = function(){
+        return 'My name is '+this.name; 
+    	}	   
+		}
+		var p1 = new Person('dreamboy');
+		alert(p1.introduce());
+		console.log(p1.introduce());
+		document.write(p1.introduce()+"<br>");
+ 
+		var p2 = new Person('obama');
+		alert(p2.introduce());
+		console.log(p2.introduce());
+		document.write(p2.introduce());
+	</script>
+</body>
+</html>

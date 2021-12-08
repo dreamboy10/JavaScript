@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>생성자와 new</title>
+</head>
+<body>
+	<script>
+		/*
+		var person = {}
+		person.name = 'dreamboy';
+		person.introduce = function(){
+    	return 'My name is '+this.name;
+		}
+		alert(person.introduce());
+		console.log(person.introduce());
+		document.write(person.introduce()+"<br>");
+		*/
+
+		var person = {
+    	'name' : 'dreamboy',
+    	'introduce' : function(){
+        return 'My name is '+this.name;
+    	}
+		}
+		alert(person.introduce());
+		console.log(person.introduce());
+		document.write(person.introduce()+"<br>");
+	</script>
+</body>
+</html>

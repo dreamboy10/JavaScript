@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>this2</title>
+</head>
+<body>
+	<script>
+		var o = {
+    	func : function(){
+        if(o === this){
+            alert("o === this");
+            console.log("o === this");
+            document.write("o === this")+"<br>";
+        }
+    	}
+		}
+		o.func(); 
+	</script>
+</body>
+</html>

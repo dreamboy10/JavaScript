@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>inheritance</title>
+</head>
+<body>
+	<script>
+		/*
+		function Person(name){
+    	this.name = name;
+    	this.introduce = function(){
+        return 'My name is '+this.name; 
+    	}   
+		}
+		var p1 = new Person('dreamboy');
+		alert(p1.introduce());
+		console.log(p1.introduce());
+		document.write(p1.introduce()+"<br>");
+		*/
+
+		function Person(name){
+    	this.name = name;
+    }
+    Person.prototype.name = null;
+    Person.prototype.introduce = function(){
+    	return 'My name is '+this.name;
+    }
+		var p1 = new Person('dreamboy');
+		alert(p1.introduce());
+		console.log(p1.introduce());
+		document.write(p1.introduce()+"<br>");
+	</script>
+</body>
+</html>

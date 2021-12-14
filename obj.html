@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>obj</title>
+</head>
+<body>
+	<script>
+		Object.prototype.contain = function(needle) {
+			for(var name in this) {
+				if(this[name] === needle) {
+					return true;
+				}
+			}
+			return false;
+		}
+
+		var o = {'name':'dreamboy', 'city':'daegu'}
+		// console.log(o.contain('dreamboy'));
+		// document.write(o.contain('dreamboy')+"<br>");
+		var a = ['dreamboy','obama','kudo'];
+		// console.log(a.contain('obama'));
+		// document.write(a.contain('obama')+"<br>");
+		for(var name in o) {
+			if(o.hasOwnProperty(name)) {
+				console.log(name);
+			}
+		}
+	</script>
+</body>
+</html>

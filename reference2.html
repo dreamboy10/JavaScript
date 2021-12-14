@@ -3,13 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>자바스크립트의 구현(사용)방식</title>
+	<title>reference2</title>
 </head>
 <body>
 	<script>
-		alert('안녕하세요!');
-		console.log('안녕하세요!');
-		document.write('안녕하세요!'+"<br>");
+		var a = {'id':1};
+		var b = a;
+		b.id = 2;
+		console.log(a.id);
+		document.write(a.id+"<br>");
 	</script>
 </body>
 </html>

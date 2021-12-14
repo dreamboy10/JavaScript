@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>prototype</title>
+</head>
+<body>
+	<script>
+		function Ultra(){}
+		Ultra.prototype.ultraProp = true;
+ 
+		function Super(){}
+		var t = new Ultra();
+		Super.prototype = t;
+ 
+		function Sub(){}
+		var s = new Super();
+		Sub.prototype = s;
+ 
+		var o = new Sub();
+		console.log(o.ultraProp);
+		document.write(o.ultraProp)+"<br>";
+	</script>
+</body>
+</html>

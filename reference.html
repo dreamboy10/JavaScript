@@ -3,14 +3,15 @@
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>값을 로그로 출력하기</title>
+	<title>reference</title>
 </head>
 <body>
 	<script>
-		const a = 10;
-		const b = 20;
-		const sum = a + b;
-		console.log(sum);
+		var a = 1;
+		var b = a;
+		b = 2;
+		console.log(a);
+		document.write(a+"<br>");
 	</script>
 </body>
 </html>

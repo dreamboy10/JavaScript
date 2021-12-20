@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>htmlelement</title>
+</head>
+<body>
+	<ul>
+  	<li>HTML</li>
+  	<li>CSS</li>
+  	<li id="active">JavaScript</li>
+	</ul>
+	<script>
+    var li = document.getElementById('active');
+    console.log(li.constructor.name); //HTMLLIElement
+    document.write(li.constructor.name+"<br>"); 
+    //HTMLLIElement
+    var lis = document.getElementsByTagName('li');
+    console.log(lis.constructor.name); //HTMLCollection
+    document.write(lis.constructor.name+"<br>"); 
+    //HTMLCollection
+	</script>
+</body>
+</html>

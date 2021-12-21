@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>attribute2</title>
+</head>
+<body>
+	<p id="target">
+    Hello world
+	</p>
+
+	<script>
+    var target = document.getElementById('target');
+    target.setAttribute('class', 'important');
+    console.log(target.setAttribute);
+    document.write(target.setAttribute+"<br>");
+    target.className = 'important';
+    console.log(target.className);
+    document.write(target.className+"<br>");
+	</script>
+</body>
+</html>

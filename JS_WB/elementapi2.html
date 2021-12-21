@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>elementapi2</title>
+</head>
+<body>
+	<ul>
+    <li>html</li>
+    <li>css</li>
+    <li id="active">JavaScript</li>
+	</ul>
+	<script>
+		var active = document.getElementById('active');
+		console.log(active.id);
+		document.write(active.id+"<br>");
+		active.id = 'deactive';
+		console.log(active.id);
+		document.write(active.id+"<br>");
+	</script>
+</body>
+</html>

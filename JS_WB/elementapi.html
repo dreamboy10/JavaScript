@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>elementapi</title>
+</head>
+<body>
+	<ul>
+    <li>html</li>
+    <li>css</li>
+    <li id="active" class="important current">
+    	JavaScript
+    </li>
+	</ul>
+	<script>
+		console.log(document.getElementById('active').tagName);
+		document.write(document.getElementById('active').tagName+"<br>");
+	</script>
+</body>
+</html>

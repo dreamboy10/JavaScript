@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>attribute</title>
+</head>
+<body>
+	<a id="target" href="http://opentutorials.org">
+		opentutorials
+	</a> <br>
+
+	<script>
+		var t = document.getElementById('target');
+		console.log(t.getAttribute('href'));
+		document.write(t.getAttribute('href')+"<br>");
+		t.setAttribute('title', 'opentutorials.org');
+		console.log(t.hasAttribute('title'));
+		document.write(t.hasAttribute('title')+"<br>");
+		t.removeAttribute('title');
+		console.log(t.hasAttribute('title'));
+		document.write(t.hasAttribute('title')+"<br>");
+	</script>
+</body>
+</html>

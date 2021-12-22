@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jqueryattr2</title>
+</head>
+<body>
+	<a id="t1" href="dom01.html">dom</a>
+	<input id="t2" type="checkbox" checked="checked"> 
+	<br>
+	<script src="../jquery-3.6.0.min.js"></script>
+	<script>
+		var t1 = $('#t1');
+		console.log(t1.attr('href')); 
+		document.write(t1.attr('href')+"<br>"); 
+		console.log(t1.prop('href'));
+		document.write(t1.prop('href')+"<br>"); 
+ 
+		var t2 = $('#t2');
+		console.log(t2.attr('checked'));
+		document.write(t2.attr('checked')+"<br>");
+		console.log(t2.prop('checked'));
+		document.write(t2.prop('checked')+"<br>");
+	</script>
+</body>
+</html>

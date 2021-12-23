@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>nodeapi</title>
+</head>
+<body id="start">
+	<ul>
+    <li>
+    	<a href="./532">html</a>
+    </li> 
+    <li>
+    	<a href="./533">css</a>
+    </li>
+    <li>
+    	<a href="./534">JavaScript</a>
+   		<ul>
+      	<li>
+      		<a href="./535">JavaScript Core</a>
+      	</li>
+      	<li>
+      		<a href="./536">DOM</a>
+      	</li>
+      	<li>
+      		<a href="./537">BOM</a>
+      	</li>
+      </ul>
+		</li>
+	</ul>
+
+	<script>
+		var s = document.getElementById('start');
+		console.log(1, s.firstChild);
+		document.write(1, s.firstChild+"<br>");
+		var ul = s.firstChild.nextSibling
+		console.log(2, ul);
+		document.write(2, ul+"<br>");
+		console.log(3, ul.nextSibling);
+		document.write(3, ul.nextSibling+"<br>");
+		console.log(4, ul.nextSibling.nextSibling);
+		document.write(4, ul.nextSibling.nextSibling
+			+"<br>");
+		console.log(5, ul.childNodes);
+		document.write(5, ul.childNodes+"<br>");
+		console.log(6, ul.childNodes[1]);
+		document.write(6, ul.childNodes[1]+"<br>");
+		console.log(7, ul.parentNode);
+		document.write(7, ul.parentNode+"<br>");
+	</script>
+</body>
+</html>

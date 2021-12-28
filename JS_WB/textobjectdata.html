@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>textobjectdata</title>
+</head>
+<body>
+	<ul>
+    <li id="target">html</li> 
+    <li>css</li>
+    <li>JavaScript</li>
+	</ul>
+
+	<script>
+		var t = document.getElementById('target').firstChild;
+    console.log(t.nodeValue);
+    document.write(t.nodeValue+"<br>");
+    console.log(t.data);
+    document.write(t.data+"<br>");
+	</script>
+</body>
+</html>

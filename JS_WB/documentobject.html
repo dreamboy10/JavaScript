@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>documentobject</title>
+</head>
+<body>
+	<script>
+		//document 객체는 window 객체의 소속이다.
+		console.log(window.document);
+		document.write(window.document+"<br>");
+		//document 객체의 자식으로는 Doctype과 html이 있다. 
+		console.log(window.document.childNodes[0]);
+		document.write(window.document.childNodes[0]+"<br>");
+		console.log(window.document.childNodes[1]);
+		document.write(window.document.childNodes[1]+"<br>");
+	</script>	
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>doelement03</title>
+	<style>
+    body{
+    	padding:0;
+    	margin:0;
+    }
+    div{
+    	border:50px solid #1065e6;
+    	padding:50px;
+    	margin:50px;
+    }
+    #target{
+    	width:100px;
+    	height:100px;
+    }
+</style>
+</head>
+<body>
+	<div>
+		<div id="target">
+    	Coding
+		</div>
+	</div>
+
+	<script>
+		var t = document.getElementById('target');
+		console.log('clientWidth:', t.clientWidth, 'clientHeight:', t.clientHeight);
+		document.write('clientWidth:', t.clientWidth, 'clientHeight:', t.clientHeight+"<br>");
+	</script>
+</body>
+</html>

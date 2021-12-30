@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>eventcancel</title>
+</head>
+<body>
+	<p>
+    <label>prevent event on</label>
+    <input id="prevent" type="checkbox" name="eventprevent" value="on"> 
+	</p>
+	<p>
+    <a href="https://www.naver.com" onclick="if(document.getElementById('prevent').checked) return false;">
+    	NAVER
+    </a>
+	</p>
+	<p>
+  	<form action="https://www.naver.com" onsubmit="if(document.getElementById('prevent').checked) return false;">
+     	<input type="submit">
+    </form>
+	</p>
+</body>
+</html>

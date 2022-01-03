@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>jqueryevent4</title>
+</head>
+<body>
+	<input type="text" id="target">
+	<p id="status"></p>
+
+	<script src="../jquery-3.6.0.min.js"></script>
+	<script>
+		var handler = function(e){
+			$('#status').html(e.type);
+		}
+		$('#target').on('focus', handler).on('blur', handler);
+		
+		/*
+		$('#target').on(
+			{
+				'focus':handler,
+				'blur':handler
+			}
+		)
+		*/
+
+		/*
+		$('#target').on('focus blur', function(e){
+    	$('#status').html(e.type);
+    });
+    */
+	</script>
+</body>
+</html>

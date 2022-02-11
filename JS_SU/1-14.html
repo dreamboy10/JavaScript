@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>조건문 사용하기</title>
+</head>
+<body>
+	<script>
+		const myPrice = 100;
+
+		if(myPrice >= 50) {
+			alert('myPrice는 50 이상입니다.');
+			console.log('myPrice는 50 이상입니다.');
+			document.write('myPrice는 50 이상입니다.'+"<br>");
+		} else if (myPrice >= 10) {
+			alert('myPrice는 10 이상 50 미만입니다.');
+			console.log('myPrice는 10 이상 50 미만입니다.');
+			document.write('myPrice는 10 이상 50 미만입니다.'+"<br>");
+		} else {
+			alert('myPrice는 10 미만입니다.');
+			console.log('myPrice는 10 미만입니다.');
+			document.write('myPrice는 10 미만입니다.'+"<br>");
+		}
+
+		if(true) {
+			alert('Hello');
+			console.log('Hello');
+			document.write('Hello'+"<br>");
+		}
+
+		const randomNum = Math.random() * 10;
+
+		if(randomNum >= 5) {
+			alert('randomNum은 5 이상');
+			console.log('randomNum은 5 이상');
+			document.write('randomNum은 5 이상'+"<br>");
+		} else {
+			alert('randomNum은 5 미만');
+			console.log('randomNum은 5 미만');
+			document.write('randomNum은 5 미만'+"<br>");
+		}
+
+		const randomNum2 = Math.random() * 10;
+
+		if(randomNum2 >= 5) alert('randomNum은 5 이상');
+		console.log('randomNum은 5 이상'); document.write('randomNum은 5 이상'+"<br>");
+	</script>
+</body>
+</html>

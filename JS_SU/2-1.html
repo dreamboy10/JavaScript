@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>진위 여부 판별하기</title>
+</head>
+<body>
+	<script>
+		const a = 10;
+		const b = 20;
+
+		alert(a < b);
+		console.log(a < b);
+		document.write(a < b+"<br>");
+
+		alert(a > b);
+		console.log(a > b);
+		document.write(a > b+"<br>");
+
+		const isIOs = navigator.userAgent.includes('iPhone');
+
+		if(isIOs) {
+
+		}
+
+		const userName = '강아지';
+		if(userName) {
+			alert('안녕하세요. ${userName}');
+			console.log('안녕하세요. ${userName}');
+			document.write('안녕하세요. ${userName}'+"<br>");
+		}
+
+		const address = '';
+		if(address) {
+			alert('당신은 ${address}에 살고 계시네요.');
+			console.log('당신은 ${address}에 살고 계시네요.');
+			document.write('당신은 ${address}에 살고 계시네요.'+"<br>");
+		}
+
+		const flg = 'JavaScript'.includes('a');
+		alert(!flg);
+		console.log(!flg);
+		document.write(!flg+"<br>");
+
+		alert(!'개미');
+		console.log(!'개미');
+		document.write(!'개미'+"<br>");
+
+		alert(!24);
+		console.log(!24);
+		document.write(!24+"<br>");
+
+		alert(![1, 2, 3]);
+		console.log(![1, 2, 3]);
+		document.write(![1, 2, 3]+"<br>");
+
+		alert(!!'개미');
+		console.log(!!'개미');
+		document.write(!!'개미'+"<br>");
+
+		alert(!!24);
+		console.log(!!24);
+		document.write(!!24+"<br>");
+
+		alert(!![1, 2, 3]);
+		console.log(!![1, 2, 3]);
+		document.write(!![1, 2, 3]+"<br>");
+	</script>
+</body>
+</html>

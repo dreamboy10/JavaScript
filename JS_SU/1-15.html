@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>조건문 사용하기 2</title>
+</head>
+<body>
+	<script>
+		const MyFruit = '사과';
+
+		switch(MyFruit) {
+			case '사과':
+				alert('사과입니다.');
+				console.log('사과입니다.');
+				document.write('사과입니다.'+"<br>");
+				break;
+		  case '귤':
+		  	alert('귤입니다.');
+				console.log('귤입니다.');
+				document.write('귤입니다.'+"<br>");
+				break;
+			default:
+				alert('기타 과일입니다.');
+				console.log('기타 과일입니다.');
+				document.write('기타 과일입니다.'+"<br>");
+				break;
+		}
+
+		const MyFruit2 = '사과';
+
+		switch(MyFruit2) {
+			case '사과':
+			case '귤':
+				alert('사과 혹은 귤입니다.');
+				console.log('사과 혹은 귤입니다.');
+				document.write('사과 혹은 귤입니다.'+"<br>");
+				break;
+			default:
+				alert('기타 과일입니다.');
+				console.log('기타 과일입니다.');
+				document.write('기타 과일입니다.'+"<br>");
+				break;
+		}
+
+		const MyFruit3 = '사과';
+
+		switch(MyFruit3) {
+			case '사과':
+			case '귤':
+				alert('사과 혹은 귤입니다.');
+				console.log('사과 혹은 귤입니다.');
+				document.write('사과 혹은 귤입니다.'+"<br>");
+				break;
+		}
+	</script>
+</body>
+</html>

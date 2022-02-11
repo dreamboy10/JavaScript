@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>화살표 함수 사용하기</title>
+</head>
+<body>
+	<script>
+		const calcSum = (a, b, c) => {
+			const result = a + b + c;
+			return result;
+		};
+		alert(calcSum);
+		console.log(calcSum);
+		document.write(calcSum+"<br>");
+
+		const calcSum2 = (a, b, c) => {
+			const result = a + b + c;
+			return result;
+		};
+		alert(calcSum2(1, 2, 3));
+		console.log(calcSum2(1, 2, 3));
+		document.write(calcSum2(1, 2, 3)+"<br>");
+
+		const myFunction1 = (a) => {
+			return a + 2;
+		};
+		alert(myFunction1(4));
+		console.log(myFunction1(4));
+		document.write(myFunction1(4)+"<br>");
+
+		const myFunction2 = (a) => {
+			return a + 2;
+		};
+		alert(myFunction2(3));
+		console.log(myFunction2(3));
+		document.write(myFunction2(3)+"<br>");
+
+		const myFunction3 = (a) => a + 2;
+		alert(myFunction3(800));
+		console.log(myFunction3(800));
+		document.write(myFunction3(800)+"<br>");
+	</script>
+</body>
+</html>

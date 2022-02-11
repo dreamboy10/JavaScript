@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>다수의 파라미터를 가지는 함수 정의하기</title>
+</head>
+<body>
+	<script>
+		/**
+		 * 파라미터의 합계를 반환하는 함수
+		 * @param prices
+		 * @returns {number}
+		 */
+
+		 function calcSum(...prices) {
+		 	let result = 0;
+		 	for (const value of prices) {
+		 		result += value;
+		 	}
+		 	return result;
+		 }
+
+		 const result1 = calcSum(10, 20);
+		 alert(result1);
+		 console.log(result1);
+		 document.write(result1+"<br>");
+
+		 const result2 = calcSum(5, 10, 15);
+		 alert(result2);
+		 console.log(result2);
+		 document.write(result2+"<br>");
+	</script>
+</body>
+</html>

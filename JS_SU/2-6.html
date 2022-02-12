@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>삼각 함수 사용하기</title>
+</head>
+<body>
+	<div class="character">
+		<img src="cat.jpg" alt="image">
+	</div>
+
+	<script>
+		/*
+		Math.PI;
+		Math.cos((90 * Math.PI) / 180);
+		Math.sin((90 * Math.PI) / 180);
+		Math.tan((45 * Math.PI) / 180);
+		Math.acos(1);
+		(Math.atan2(1, 1) * 180) / Math.PI;
+
+		alert(Math.PI);
+		console.log(Math.PI);
+		document.write(Math.PI+"<br>");
+
+		alert(Math.cos((90 * Math.PI) / 180));
+		console.log(Math.cos((90 * Math.PI) / 180));
+		document.write(Math.cos((90 * Math.PI) / 180)+"<br>");
+
+		alert(Math.sin((90 * Math.PI) / 180));
+		console.log(Math.sin((90 * Math.PI) / 180));
+		document.write(Math.sin((90 * Math.PI) / 180)+"<br>");
+
+		alert(Math.tan((45 * Math.PI) / 180));
+		console.log(Math.tan((45 * Math.PI) / 180));
+		document.write(Math.tan((45 * Math.PI) / 180)+"<br>");
+
+		alert(Math.acos(1));
+		console.log(Math.acos(1));
+		document.write(Math.acos(1)+"<br>");
+
+		alert((Math.atan2(1, 1) * 180) / Math.PI);
+		console.log((Math.atan2(1, 1) * 180) / Math.PI);
+		document.write((Math.atan2(1, 1) * 180) / Math.PI+"<br>");
+		*/
+
+		/*
+		let degree = 0;
+
+		const rotation = (degree * Math.PI) / 180;
+
+		const targetX = 100 * Math.cos(rotation);
+		const targetY = 100 * Math.sin(rotation);
+
+		alert(degree);
+		console.log(degree);
+		document.write(degree+"<br>");
+		*/
+
+		const character = document.querySelector('.character');
+
+		let degree = 0;
+
+		loop();
+
+		function loop() {
+			const rotation = (degree * Math.PI) / 180;
+
+			const targetX = window.innerWidth / 2 + 100 * Math.cos(rotation) - 50;
+			const targetY = window.innerHeight / 2 + 100 * Math.sin(rotation) - 50;
+
+			character.style.left = '${targetX}px';
+			character.style.top = '${targetY}px';
+
+			degree += 1;
+
+			requestAnimationFrame(loop);
+		}
+	</script>
+</body>
+</html>

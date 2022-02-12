@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열의 공백 처리하기</title>
+</head>
+<body>
+	<script>
+		const targetString1 = ' 안녕하세요 ';
+		const trimmedString1 = targetString1.trim();
+
+		alert(trimmedString1);
+		console.log(trimmedString1);
+		document.write(trimmedString1+"<br>");
+
+		const targetString2 = '사과를 먹었어요\n';
+		const trimmedString2 = targetString2.trim();
+
+		alert(trimmedString2);
+		console.log(trimmedString2);
+		document.write(trimmedString2+"<br>");
+
+		const targetString3 = ' 사과. 귤. ';
+		const trimmedString3 = targetString3.trim();
+
+		alert(trimmedString3);
+		console.log(trimmedString3);
+		document.write(trimmedString3+"<br>");
+	</script>
+</body>
+</html>

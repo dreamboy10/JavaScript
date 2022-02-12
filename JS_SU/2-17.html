@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열 합치기</title>
+</head>
+<body>
+	<div class="name_cotainer">
+		<label>
+			성
+			<input type="text" id="familyNameText" class="text" type="text">
+		</label>
+		<label>
+			이름
+			<input type="text" id="firstNameText" class="text" type="text">
+		</label>
+	</div>
+
+	<p id="fullName">
+		
+	</p>
+
+	<script>
+		/*
+		const country = '대한민국';
+		const states = '대구';
+
+		alert(country + states);
+		console.log(country + states);
+		document.write(country + states+"<br>");
+
+		const country2 = '대한민국';
+		const states2 = '제주';
+
+		alert('${country2}${states2}');
+		console.log('${country2}${states2}');
+		document.write('${country2}${states2}'+"<br>");
+		*/
+
+		const familyNameText = document.querySelector('#familyNameText');
+
+		const firstNameText = document.querySelector('#firstNameText');
+
+		const fullName = document.querySelector('#fullName');
+
+		firstNameText.addEventListener('keyup', onKeyUp);
+		familyNameText.addEventListener('keyup', onKeyUp);
+
+		function onKeyUp() {
+			const familyName = familyNameText.value;
+			const firstName = firstNameText.value;
+			fullName.innerHTML = familyName + ' ' + firstName;
+		}
+	</script>
+</body>
+</html>

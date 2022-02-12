@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열 검색하기(인덱스 검색)</title>
+</head>
+<body>
+	<main>
+		<h1>
+			'JavaScript를 배우자'의 인덱스
+		</h1>
+		<table>
+			<tr>
+				<th>
+					indexOf('JavaScript')
+				</th>
+				<td class="result1">
+					
+				</td>
+			</tr>
+			<tr>
+				<th>
+					indexOf('배우자')
+				</th>
+				<td class="result2">
+					
+				</td>
+			</tr>
+			<tr>
+				<th>
+					indexOf('JavaScript; 5')
+				</th>
+				<td class="result3">
+					
+				</td>
+			</tr>
+			<tr>
+				<th>
+					indexOf('HTML')
+				</th>
+				<td class="result4">
+					
+				</td>
+			</tr>
+			<tr>
+				<th>
+					indexOf('a')
+				</th>
+				<td class="result5">
+					
+				</td>
+			</tr>
+			<tr>
+				<th>
+					lastIndexOf('a')
+				</th>
+				<td class="result6">
+					
+				</td>
+			</tr>
+		</table>
+	</main>
+
+	<script>
+		/*
+		const myString = 'JavaScript를 배우자';
+
+		const a1 = myString.indexOf('JavaScript');
+
+		alert(a1);
+		console.log(a1);
+		document.write(a1+"<br>");
+
+		const a2 = myString.indexOf('배우자');
+
+		alert(a2);
+		console.log(a2);
+		document.write(a2+"<br>");
+
+		const a3 = myString.lastIndexOf('a');
+
+		alert(a3);
+		console.log(a3);
+		document.write(a3+"<br>");
+
+		const b1 = myString.indexOf('HTML');
+
+		alert(b1);
+		console.log(b1);
+		document.write(b1+"<br>");
+
+		const b2 = myString.indexOf('j');
+
+		alert(b2);
+		console.log(b2);
+		document.write(b2+"<br>");
+		*/
+
+		/*
+		const myString2 = 'JavaScript를 배우자';
+		const c1 = myString2.indexOf('JavaScript', 4);
+
+		alert(c1);
+		console.log(c1);
+		document.write(c1+"<br>");
+		*/
+
+		const targetString = 'JavaScript를 배우자';
+
+		document.querySelector('.result1').innerHTML = targetString.indexOf('JavaScript');
+		document.querySelector('.result2').innerHTML = targetString.indexOf('배우자');
+		document.querySelector('.result3').innerHTML = targetString.indexOf('JavaScript; 5');
+		document.querySelector('.result4').innerHTML = targetString.indexOf('HTML');
+		document.querySelector('.result5').innerHTML = targetString.indexOf('a');
+		document.querySelector('.result6').innerHTML = targetString.lastIndexOf('a');
+	</script>
+</body>
+</html>

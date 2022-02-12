@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열 나누기</title>
+</head>
+<body>
+	<table>
+		<tr>
+			<th>
+				ID
+			</th>
+			<td class="id"></td>
+		</tr>
+		<tr>
+			<th>
+				name
+			</th>
+			<td class="name"></td>
+		</tr>
+		<tr>
+			<th>
+				age
+			</th>
+			<td class="age"></td>
+		</tr>
+	</table>
+
+	<script>
+		/*
+		const myUrl = 'http://example.com/?id=123456&name=Lion&age=28';
+
+		myUrl.split('&');
+
+		myUrl.split(/&|\?/);
+
+		alert(myUrl.split('&'));
+		console.log(myUrl.split('&'));
+		document.write(myUrl.split('&')+"<br>");
+
+		alert(myUrl.split(/&|\?/));
+		console.log(myUrl.split(/&|\?/));
+		document.write(myUrl.split(/&|\?/)+"<br>");
+
+		'JavaScript'.split('');
+
+		alert('JavaScript'.split(''));
+		console.log('JavaScript'.split(''));
+		document.write('JavaScript'.split('')+"<br>");
+
+		'JavaScript'.split();
+
+		alert('JavaScript'.split());
+		console.log('JavaScript'.split());
+		document.write('JavaScript'.split()+"<br>");
+		*/
+
+		const hashes = {};
+
+		const parameters = location.search.split(/&|\?/).filter((value) => {
+			return value.includes('=');
+		});
+
+		parameters.forEach((parameter) => {
+			const parameterList = parameter.split('=');
+			const key = parameterList[0];
+			const value = decodeURIComponent(parameterList[1]);
+
+			hashes[key] = value;
+		});
+
+		if (hashes['id'] != null) {
+			document.querySelector('.id').innerHTML = hashes['id'];
+		}
+		if (hashes['name'] != null) {
+			document.querySelector('.name').innerHTML = hashes['name'];
+		}
+		if (hashes['age'] != null) {
+			document.querySelector('.age').innerHTML = hashes['age'];
+		}
+	</script>
+</body>
+</html>

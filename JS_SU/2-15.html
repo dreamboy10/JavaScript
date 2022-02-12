@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>지정 문자열 변환하기</title>
+</head>
+<body>
+	<div id="phoneNumberText" placeholder="전화번호" type="tel">
+		<p class="caption">
+			<small>
+				
+			</small>
+		</p>
+
+		<button id="submitButton" type="submit">
+			데이터 전송
+		</button>
+	</div>
+
+	<script>
+		const imageName = 'cat.jpg';
+		imageName.replace('cat.jpg');
+
+		const inputText = '바보\n-형재';
+		inputText.replace('\n', '');
+
+		alert(imageName);
+		console.log(imageName);
+		document.write(imageName+"<br>");
+
+		alert(inputText);
+		console.log(inputText);
+		document.write(inputText+"<br>");
+
+		let phoneNumber = '010-1234-5678';
+		phoneNumber.replace('-', '');
+
+		alert(phoneNumber);
+		console.log(phoneNumber);
+		document.write(phoneNumber+"<br>");
+
+		let phoneNumber2 = '01034567890';
+		phoneNumber2.replace(/-/g, '');
+
+		alert(phoneNumber2);
+		console.log(phoneNumber2);
+		document.write(phoneNumber2+"<br>");
+
+		/*
+		document.querySelector('#submitButton').addEventListener('click', (event) => {
+			const phoneNumber = document.querySelector('#phonenumberText').value;
+
+			const trimmedPhoneNumber = phoneNumber.replace(/-/g, '');
+
+			alert('전화번호는 ${trimmedPhoneNumber}입니다.');
+			console.log('전화번호는 ${trimmedPhoneNumber}입니다.');
+			document.write('전화번호는 ${trimmedPhoneNumber}입니다.'+"<br>");
+
+			event.preventDefault();
+		});
+		*/
+	</script>
+</body>
+</html>

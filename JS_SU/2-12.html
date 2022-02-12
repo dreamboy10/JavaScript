@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열에서 문자 다루기(문자열에서 문자 추출하기)</title>
+</head>
+<body>
+	<header>
+		<label>
+			지역명의 첫 번째 글자를 입력해 주세요.
+			<input type="text" id="search-word-input" maxlength="1">
+		</label>
+	</header>
+
+	<div id="prefecture-list">
+		<button data-name="속초" data-phonetic="sokcho">속초</button>
+		<button data-name="부산" data-phonetic="busan">부산</button>
+		<button data-name="포항" data-phonetic="pohang">포항</button>
+		<button data-name="상주" data-phonetic="sangju">상주</button>
+		<button data-name="서울" data-phonetic="seoul">서울</button>
+		<button data-name="제주" data-phonetic="jeju">제주</button>
+		<button data-name="김포" data-phonetic="kimpo">김포</button>
+		<button data-name="세종" data-phonetic="saejong">세종</button>
+		<button data-name="수원" data-phonetic="suwon">수원</button>
+		<button data-name="삼척" data-phonetic="samchok">삼척</button>
+	</div>
+
+	<script>
+		/*
+		'JavaScript'.charAt(3);
+		'JavaScript'.charAt();
+
+		alert('JavaScript'.charAt(3));
+		console.log('JavaScript'.charAt(3));
+		document.write('JavaScript'.charAt(3)+"<br>");
+
+		alert('JavaScript'.charAt());
+		console.log('JavaScript'.charAt());
+		document.write('JavaScript'.charAt()+"<br>");
+		*/
+
+		const searchWordText = document.querySelector('#search-word-input');
+
+		const prefectureList = document.querySelectorAll('#prefecture-list button');
+
+		searchWordText.addEventListener('keyup', () => {
+			const searchWord = searchWordText.value;
+
+			prefectureList.forEach((element) => {
+				if(!searchWord || searchWord === '') {
+					element.classList.remove('hide');
+					return;
+				}
+
+				const prefectureName = element.dataset.name;
+				const phonetic = element.dataset.phonetic;
+
+				if(
+					searchWord.charAt(0) === prefectureName.charAt(0) ||
+					searchWord.charAt(0) === phonetic.charAt(0)
+				) {
+					element.classList.remove('hide');
+				} else {
+					element.classList.add('hide');
+				}
+			});
+		});
+	</script>
+</body>
+</html>

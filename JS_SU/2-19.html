@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열과 식 함께 다루기</title>
+</head>
+<body>
+	<main id="main">
+		
+	</main>
+
+	<script>
+		/*
+		const userName = '고양이';
+
+		const tag = '<div class="container">' + '안녕하세요 ' + userName + '님' + '</div>';
+
+		alert(tag);
+		console.log(tag);
+		document.write(tag+"<br>");
+
+		const userName2 = '사자';
+
+		const tag2 = `<div class="container">안녕하세요 ${userName2} 님</div>`;
+
+		alert(tag2);
+		console.log(tag2);
+		document.write(tag2+"<br>");
+
+		const str = `123 X 123은 ${123 * 123} 입니다.`;
+
+		alert(str);
+		console.log(str);
+		document.write(str+"<br>");
+		*/
+
+		const today = new Date();
+
+		document.querySelector('#main').innerHTML = `
+			<h1>오늘${today.getMonth() + 1}/${today.getDate()}의 날씨</h1>
+			<p>서울은 맑음</p>
+		`;
+	</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>정규 표현식 사용하기</title>
+</head>
+<body>
+	<script>
+		if(/iPhone|iPod|iPad/.test(navigator.userAgent)) {
+			alert('접속한 브라우저는 iOS입니다.');
+			console.log('접속한 브라우저는 iOS입니다.');
+			document.write('접속한 브라우저는 iOS입니다.'+"<br>");
+		}
+
+		if (
+			navigator.userAgent.includes('iPhone') ||
+			navigator.userAgent.includes('iPod') ||
+			navigator.userAgent.includes('iPad')
+		) {
+			alert('접속한 브라우저는 iOS입니다.');
+			console.log('접속한 브라우저는 iOS입니다.');
+			document.write('접속한 브라우저는 iOS입니다.'+"<br>");
+		}
+	</script>
+</body>
+</html>

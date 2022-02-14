@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>정규 표현식으로 특정 문자 검색하기</title>
+</head>
+<body>
+	<h2>
+		전화번호를 입력해주세요.
+	</h2>
+
+	<input type="tel" id="phoneNumberText" placeholder="전화번호">
+	<p id="warningMessage">
+		
+	</p>
+
+	<script>
+		// /J/.test('JavaScript');
+
+		// alert(/J/.test('JavaScript'));
+		// console.log(/J/.test('JavaScript'));
+		// document.write(/J/.test('JavaScript')+"<br>");
+
+		// /^iP/.test('iPhone');
+
+		// alert(/^iP/.test('iPhone'));
+		// console.log(/^iP/.test('iPhone'));
+		// document.write(/^iP/.test('iPhone')+"<br>");
+
+		// /\d/.test('레시피');
+
+		// alert(/\d/.test('레시피'));
+		// console.log(/\d/.test('레시피'));
+		// document.write(/\d/.test('레시피')+"<br>");
+
+		// /Java.*/.test('JavaScript');
+
+		// alert(/Java.*/.test('JavaScript'));
+		// console.log(/Java.*/.test('JavaScript'));
+		// document.write(/Java.*/.test('JavaScript')+"<br>");
+
+		// /코.*피/.test('코드 레시피');
+
+		// alert(/코.*피/.test('코드 레시피'));
+		// console.log(/코.*피/.test('코드 레시피'));
+		// document.write(/코.*피/.test('코드 레시피')+"<br>");
+
+		// /\d+-\d+-\d+/.test('010-1234-5678');
+
+		// alert(/\d+-\d+-\d+/.test('010-1234-5678'));
+		// console.log(/\d+-\d+-\d+/.test('010-1234-5678'));
+		// document.write(/\d+-\d+-\d+/.test('010-1234-5678')+"<br>");
+
+		const phoneNumberText = document.querySelector('#phoneNumberText');
+
+		const warningMessage = document.querySelector('#warningMessage');
+
+		phoneNumberText.addEventListener('keyup', () => {
+			const phoneNumber = phoneNumberText.value;
+			const trimmedPhoneNumber = phoneNumber.replace(/-/g, '');
+
+			if(/^[0][0-9]{9,10}$/.test(trimmedPhoneNumber) === false) {
+				warningMessage.innerText = '전화번호의 형식에 맞춰 입력해 주세요.';
+			} else {
+				warningMessage.innerText = '';
+			}
+		});
+	</script>
+</body>
+</html>

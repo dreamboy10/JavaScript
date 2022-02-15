@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열 URI 디코드하기</title>
+</head>
+<body>
+	<script>
+		decodeURI('http://example.com/귀여운 고양이 페이지.html');
+
+		alert(decodeURI('http://example.com/귀여운 고양이 페이지.html'));
+		console.log(decodeURI('http://example.com/귀여운 고양이 페이지.html'));
+		document.write(decodeURI('http://example.com/귀여운 고양이 페이지.html')+"<br>");
+
+		decodeURI('http%3A%2F%22Fexample.com%2F귀여운 고양이 페이지.html');
+
+		alert(decodeURI('http%3A%2F%22Fexample.com%2F귀여운 고양이 페이지.html'));
+		console.log(decodeURI('http%3A%2F%22Fexample.com%2F귀여운 고양이 페이지.html'));
+		document.write(decodeURI('http%3A%2F%22Fexample.com%2F귀여운 고양이 페이지.html')+"<br>");
+
+		decodeURIComponent('http://example.com/귀여운 고양이 페이지.html');
+
+		alert(decodeURIComponent('http://example.com/귀여운 고양이 페이지.html'));
+		console.log(decodeURIComponent('http://example.com/귀여운 고양이 페이지.html'));
+		document.write(decodeURIComponent('http://example.com/귀여운 고양이 페이지.html')+"<br>");
+	</script>
+</body>
+</html>

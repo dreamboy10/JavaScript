@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열 URI 이스케이프 처리하기</title>
+</head>
+<body>
+	<h1>
+		트윗하고 싶은 내용을 입력해주세요.
+	</h1>
+	<textarea id="tweetTextArea"></textarea> <br>
+	<button id="tweetButton">
+		트윗하기
+	</button>
+
+	<script>
+		/*
+		encodeURI('http://example.com/귀여운 고양이 페이지.html');
+
+		alert(encodeURI('http://example.com/귀여운 고양이 페이지.html'));
+		console.log(encodeURI('http://example.com/귀여운 고양이 페이지.html'));
+		document.write(encodeURI('http://example.com/귀여운 고양이 페이지.html')+"<br>");
+
+		encodeURIComponent('http://example.com/귀여운 고양이 페이지.html');
+
+		alert(encodeURIComponent('http://example.com/귀여운 고양이 페이지.html'));
+		console.log(encodeURIComponent('http://example.com/귀여운 고양이 페이지.html'));
+		document.write(encodeURIComponent('http://example.com/귀여운 고양이 페이지.html')+"<br>");
+		*/
+
+		document.querySelector('#tweetButton').addEventListener('click', () => {
+			let tweetText = document.querySelector('#tweetTextArea').value;
+
+			tweetText += '#JavaScript';
+
+			const encodedText = encodeURIComponent(tweetText);
+
+			const tweetURL = `https://twitter.com/intent/tweet?text=${encodedText}`;
+
+			window.open(tweetURL);
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>문자열 길이 맞추기</title>
+</head>
+<body>
+	<span class="hour"></span>
+	: <span class="minute"></span>
+	: <span class="second"></span>
+
+	<script>
+		/*
+		'5'.padStart(2, '0');
+
+		alert('5'.padStart(2, '0'));
+		console.log('5'.padStart(2, '0'));
+		document.write('5'.padStart(2, '0')+"<br>");
+
+		'ff'.padEnd(6, '0');
+
+		alert('ff'.padEnd(6, '0'));
+		console.log('ff'.padEnd(6, '0'));
+		document.write('ff'.padEnd(6, '0')+"<br>");
+
+		'123'.padStart(3, '0');
+
+		alert('123'.padStart(3, '0'));
+		console.log('123'.padStart(3, '0'));
+		document.write('123'.padStart(3, '0')+"<br>");
+
+		'ff'.padStart(6);
+
+		alert('ff'.padStart(6));
+		console.log('ff'.padStart(6));
+		document.write('ff'.padStart(6)+"<br>");
+		*/
+
+		const hourElement = document.querySelector('.hour');
+
+		const minuteElement = document.querySelector('.minute');
+
+		const secondElement = document.querySelector('.second');
+
+		update();
+
+		function update() {
+			const currentTime = new Date();
+
+			const second = currentTime.getSeconds();
+			secondElement.innerText = addZeroPadding(second);
+
+			requestAnimationFrame(update);
+
+			/**
+			 * 두 자리의 형식이 되도록 앞부분에 0을 추가하는 함수
+			 * @param num
+			 * @returns {string}
+			*/
+
+			function addZeroPadding(num) {
+				return String(num).padStart(2, '0');
+			}
+		}
+	</script>
+</body>
+</html>

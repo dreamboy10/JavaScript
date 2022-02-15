@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>소수점 자릿수 지정하기</title>
+</head>
+<body>
+	<div class="timer">
+		<div class="second"></div>
+	</div>
+
+	<script>
+		/*
+		(0.333).toFixed(2);
+
+		alert((0.333).toFixed(2));
+		console.log((0.333).toFixed(2));
+		document.write((0.333).toFixed(2)+"<br>");
+
+		(123.5678).toFixed(1);
+
+		alert((123.5678).toFixed(1));
+		console.log((123.5678).toFixed(1));
+		document.write((123.5678).toFixed(1)+"<br>");
+
+		(2.4).toFixed(4);
+
+		alert((2.4).toFixed(4));
+		console.log((2.4).toFixed(4));
+		document.write((2.4).toFixed(4)+"<br>");
+
+		(0.33333).toPrecision(2);
+
+		alert((0.33333).toPrecision(2));
+		console.log((0.33333).toPrecision(2));
+		document.write((0.33333).toPrecision(2)+"<br>");
+
+		(123.456).toPrecision(3);
+
+		alert((123.456).toPrecision(3));
+		console.log((123.456).toPrecision(3));
+		document.write((123.456).toPrecision(3)+"<br>");
+
+		(4.56).toPrecision(2);
+
+		alert((4.56).toPrecision(2));
+		console.log((4.56).toPrecision(2));
+		document.write((4.56).toPrecision(2)+"<br>");
+
+		(10).toPrecision(4);
+
+		alert((10).toPrecision(4));
+		console.log((10).toPrecision(4));
+		document.write((10).toPrecision(4)+"<br>");
+		*/
+
+		const secondElement = document.querySelector('.second');
+
+		const goalTime = new Date().getTime() + 15 * 1000;
+
+		update();
+
+		function update() {
+			const currentTime = new Date().getTime();
+
+			const leftTime = goalTime - currentTime;
+
+			secondElement.innerText = (leftTime / 1000).toFixed(2);
+
+			requestAnimationFrame(update);
+		}
+	</script>
+</body>
+</html>

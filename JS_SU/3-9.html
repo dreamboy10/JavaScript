@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배열 결합하기</title>
+</head>
+<body>
+	<script>
+		const array1 = ['곰', '사자'];
+		const array2 = ['여우'];
+		const array3 = array1.concat(array2);
+		alert(array3);
+		console.log(array3);
+		document.write(array3+"<br>");
+
+		const array4 = ['곰', '사자'];
+		alert([...array4]);
+		console.log([...array4]);
+		document.write([...array4]+"<br>");
+
+		const array5 = ['곰', '사자'];
+		const array6 = ['여우'];
+		const array7 = [...array5, ...array6];
+		alert([...array7]);
+		console.log([...array7]);
+		document.write([...array7]+"<br>")
+	</script>
+</body>
+</html>

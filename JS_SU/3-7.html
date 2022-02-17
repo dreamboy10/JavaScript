@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배열 요소 삭제하기</title>
+</head>
+<body>
+	<script>
+		const array1 = ['사과', '귤', '바나나'];
+		const shiftedValue = array1.shift();
+
+		alert(shiftedValue);
+		console.log(shiftedValue);
+		document.write(shiftedValue+"<br>");
+
+		alert(array1);
+		console.log(array1);
+		document.write(array1+"<br>");
+
+		const array2 = ['사과', '귤', '바나나'];
+		const poppedValue = array2.pop();
+
+		alert(poppedValue);
+		console.log(poppedValue);
+		document.write(poppedValue+"<br>");
+
+		alert(array2);
+		console.log(array2);
+		document.write(array2+"<br>");
+
+		const array3 = [];
+		const poppedValue2 = array3.pop();
+
+		alert(poppedValue2);
+		console.log(poppedValue2);
+		document.write(poppedValue2+"<br>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>조건을 만족하는 배열 요소 가져오기</title>
+</head>
+<body>
+	<div class="search-word-wrapper">
+		<label>
+			유저 ID
+			<input type="text" id="search-id-input">
+		</label>
+	</div>
+
+	<p id="search-result">
+		유저 검색 결과 없음
+	</p>
+
+	<script>
+		const userDataList = [
+			{id: 123, name: '곰'},
+			{id: 1021, name: '사자'},
+			{id: 6021, name: '여우'}
+		];
+
+		const searchIdInput = document.querySelector('#search-id-input');
+
+		const searchResult = document.querySelector('#search-result');
+
+		searchIdInput.addEventListener('keyup', () => {
+			const searchId = Number(event.target.value);
+			findUser(searchId);
+		});
+
+		function findUser(searchId) {
+			const targetData = userDataList.find((data) => data.id === searchId);
+
+			if(targetData == null) {
+				searchResult.textContent = '유저 검색 결과 없음';
+				return;
+			}
+
+			searchResult.textContent = targetData.name;
+		}
+		const myArray = ['곰', '사자', '여우', '원숭이'];
+
+		const targetUser = myArray.find((element) => element === '사자');
+
+		alert(targetUser);
+		console.log(targetUser);
+		document.write(targetUser+"<br>");
+
+		const myArray2= ['사자', '곰', '여우', '양'];
+
+		const targetIndex = myArray2.findIndex((element) => element === '곰');
+
+		alert(targetIndex);
+		console.log(targetIndex);
+		document.write(targetIndex+"<br>");
+	</script>
+</body>
+</html>

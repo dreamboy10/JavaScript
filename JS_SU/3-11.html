@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배열 요소 검색하기</title>
+</head>
+<body>
+	<script>
+		['사과', '바나나', '귤'].indexOf('바나나');
+		[0, 2, 4, 6, 4, 2, 0].indexOf(4);
+		[0, 2, 4, 6, 4, 2, 0].lastIndexOf(4);
+
+		alert(['사과', '바나나', '귤'].indexOf('바나나'));
+		console.log(['사과', '바나나', '귤'].indexOf('바나나'));
+		document.write(['사과', '바나나', '귤'].indexOf('바나나')+"<br>");
+
+		alert([0, 2, 4, 6, 4, 2, 0].indexOf(4));
+		console.log([0, 2, 4, 6, 4, 2, 0].indexOf(4));
+		document.write([0, 2, 4, 6, 4, 2, 0].indexOf(4)+"<br>");
+
+		alert([0, 2, 4, 6, 4, 2, 0].lastIndexOf(4));
+		console.log([0, 2, 4, 6, 4, 2, 0].lastIndexOf(4));
+		document.write([0, 2, 4, 6, 4, 2, 0].lastIndexOf(4)+"<br>");
+
+		['사과', '바나나', '귤'].includes('바나나');
+		[0, 2, 4, 6, 8, 10].includes(3);
+
+		alert(['사과', '바나나', '귤'].includes('바나나'));
+		console.log(['사과', '바나나', '귤'].includes('바나나'));
+		document.write(['사과', '바나나', '귤'].includes('바나나')+"<br>");
+
+		alert([0, 2, 4, 6, 8, 10].includes(3));
+		console.log([0, 2, 4, 6, 8, 10].includes(3));
+		document.write([0, 2, 4, 6, 8, 10].includes(3)+"<br>");
+	</script>
+</body>
+</html>

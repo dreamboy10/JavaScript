@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배열 요소 정렬 방법 지정하기</title>
+</head>
+<body>
+	<script>
+		const array1 = [1, 2, 3, 3, 4, 5];
+		array1.sort((a, b) => {
+			if(a < b) {
+				return 1;
+			}
+
+			if(a == b) {
+				return 0;
+			}
+
+			if(a > b) {
+				return -1;
+			}
+		});
+
+		alert(array1);
+		console.log(array1);
+		document.write(array1+"<br>");
+	</script>
+</body>
+</html>

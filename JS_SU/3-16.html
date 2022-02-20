@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>배열 요소 알파벳순 정렬하기</title>
+</head>
+<body>
+	<script>
+		const arr1 = ['grape', 'Orange', 'apple'];
+		arr1.sort();
+
+		alert(arr1);
+		console.log(arr1);
+		document.write(arr1+"<br>");
+
+		const arr2 = ['grape', 'Orange', 'apple'];
+		arr2.sort((a, b) => a.localeCompare(b));
+
+		alert(arr2);
+		console.log(arr2);
+		document.write(arr2+"<br>");
+	</script>
+</body>
+</html>

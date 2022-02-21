@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>조건을 만족하는 배열 요소 추출하여 새 배열 만들기</title>
+</head>
+<body>
+	<div class="button-wrapper">
+		<button class="button" data-age="20">20세 이상</button>
+		<button class="button" data-age="30">30세 이상</button>
+		<button class="button" data-age="40">40세 이상</button>
+	</div>
+
+	<ul class="user_list">
+		
+	</ul>
+
+	<script>
+		const newArray = [10, 20, 30, 40].filter((value) => value >= 30);
+
+		alert(newArray);
+		console.log(newArray);
+		document.write(newArray+"<br>");
+
+		const newArray2 = [10, 20, 30, 40].filter((value) => {
+			return value >= 30;
+		});
+
+		alert(newArray2);
+		console.log(newArray2);
+		document.write(newArray2+"<br>");
+
+		const newArray3 = [10, 20, 30, 40].filter(function(value) {
+			return value >= 30;
+		});
+
+		alert(newArray3);
+		console.log(newArray3);
+		document.write(newArray3+"<br>");
+
+		const userDataList = [
+			{name: '곰', age: 18},
+			{name: '여우', age: 27},
+			{name: '사자', age: 32},
+			{name: '얼룩말', age: 41},
+			{name: '기린', age: 56}
+		];
+
+		document.querySelectorAll('.button').forEach((element) => {
+			element.addEventListener('click', (event) => {
+				onclickButton(event);
+			});
+		});
+
+		function onclickButton(event) {
+			const button = event.target;
+			const targetAge = button.dataset.age;
+			const filterdList = userDataList.filter((data) => data.age >= targetAge);
+			updateList(filterdList);
+		}
+
+		function updateList(filterdList) {
+			let listHtml = '';
+
+			for(const data of filterdList) {
+				listHtml += `<li>${data.name} : ${data.age}세</li>`;
+			}
+
+			document.querySelector('.user_list').innerHTML = listHtml;
+		}
+	</script>
+</body>
+</html>

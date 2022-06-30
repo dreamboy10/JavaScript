@@ -553,6 +553,7 @@
     document.write(result + "<br>");
     */
     
+    /*
     function showError(){
       alert('에러가 발생했습니다.');
       console.log('에러가 발생했습니다.');
@@ -565,6 +566,172 @@
     const result = showError();
     console.log(result);
     document.write(result + "<br>");
+    */
+    
+    /*
+    showError();
+    
+    function showError(){
+      console.log("error");
+      document.write("error" + "<br>");
+    }
+    */
+    
+    /*
+    let showError = () => {
+      console.log("error");
+      document.write("error" + "<br>");
+    }
+    */
+    
+    /*
+    const sayHello = (name) => {
+      const msg = `Hello, ${name}`;
+      console.log(msg);
+      document.write(msg + "<br>");
+    }
+    sayHello('Mike');
+    sayHello('Obama');
+    sayHello('Sae Jeong');
+    */
+    
+    /*
+    const add = (num1, num2) => {
+      const result = num1 + num2;
+      return result;
+    };
+    num1 = 100;
+    num2 = 400;
+    console.log(num1 + num2);
+    document.write(num1 + num2 + "<br>");
+    */
+    
+    /*
+    const add = (num1, num2) => (
+      num1 + num2
+    );
+    num1 = 20000;
+    num2 = 40000;
+    console.log(num1 + num2);
+    document.write(num1 + num2 + "<br>");
+    */
+    
+    /*
+    const superman = {
+      name: 'June',
+      age : 30,
+    }
+    console.log(superman.name);
+    document.write(superman.name + "<br>");
+    console.log(superman['age']);
+    document.write(superman['age'] + "<br>");
+    */
+    
+    /*
+    const superman = {
+      name: 'June',
+      age : 30,
+    }
+    superman.hairColor = 'Blue';
+    superman['hobby'] = 'baseball';
+    console.log(superman);
+    document.write(superman + "<br>");
+    */
+    
+    /*
+    const superman = {
+      name: 'June',
+      age : 30,
+    }
+    delete superman.age;
+    console.log(superman);
+    document.write(superman + "<br>");
+    */
+    
+    /*
+    function makeObject(name, age){
+      return {
+        name : name,
+        age : age,
+        hobby : 'baseball'
+      };
+    }
+    const Mike = makeObject("Mike", 30);
+    console.log(Mike);
+    document.write(Mike + "<br>");
+    */
+    
+    /*
+    function makeObject(name, age){
+      return {
+        name,
+        age,
+        hobby : 'baseball'
+      };
+    }
+    const Mike = makeObject("Mike", 30);
+    console.log(Mike);
+    document.write(Mike + "<br>");
+    
+    console.log("age" in Mike);
+    document.write("age" in Mike);
+    console.log("birthday" in Mike);
+    document.write("birthday" in Mike);
+    */
+    
+    /*
+    function isAudlt(user){
+      if(!('age' in user) || user.age < 20){
+        return false;
+      } 
+      return true;
+    }
+    
+    const Mike = {
+      name : 'Mike',
+      age : 30
+    };
+    const Jane = {
+      name : "Jane"
+    };
+    
+    console.log(isAudlt(Jane));
+    document.write(isAudlt(Jane) + "<br>");
+    */
+    
+    /*
+    const Mike = {
+      name : 'Mike',
+      age : 30
+    };
+    
+    for(x in Mike){
+      console.log(Mike[x]);
+      document.write(Mike[x] + "<br>");
+    }
+    */
+    
+    /*
+    let boy = {
+      name : 'Mike',
+      sayThis : () => {
+        console.log(this);
+        document.write(this + "<br>");
+      }
+    };
+    
+    boy.sayThis();
+    */
+    
+    let days = ["mon", "tue", "wed"];
+    
+    days.push("thu");
+    days.unshift("sun");
+    
+    for(let x of days){
+      console.log(x);
+      document.write(x + "<br>");
+    }
   </script>
 </body>
 </html>

@@ -65,6 +65,7 @@
     document.write(result + "<br>");
     */
     
+    /*
     let arr = [
       ['mon', '월'],
       ['tue', '화']
@@ -74,6 +75,27 @@
     
     console.log(result);
     document.write(result + "<br>");
+    */
+    
+    const user = {
+      name : "Mike",
+      age : 30,
+    };
+    
+    // user.showName = function() {};
+    
+    const showName = Symbol("show name");
+    user[showName] = function() {
+      console.log(this.name);
+      document.write(this.name + "<br>");
+    };
+    
+    user[showName]();
+    
+    for (let key in user) {
+      console.log(`His ${key} is ${user[key]}.`);
+      document.write(`His ${key} is ${user[key]}.` + "<br>");
+    }
   </script>
 </body>
 </html>

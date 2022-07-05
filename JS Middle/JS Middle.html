@@ -120,6 +120,7 @@
     document.write(newList + "<br>");
     */
     
+    /*
     function hasCola(str){
       if(str.includes("콜라")){
         console.log('금칙어가 있습니다.');
@@ -133,6 +134,108 @@
     hasCola("와 사이다가 짱이야!");
     hasCola("무슨소리, 콜라가 최고");
     hasCola("콜라");
+    */
+    
+    /*
+    let arr = ["Mike", "Tom", "Jane"];
+    
+    arr.forEach((name, index) => {
+      console.log(`${index + 1}. ${name}`);
+      document.write(`${index + 1}. ${name}` + "<br>");
+    });
+    */
+    
+    /*
+    let arr = [1, 2, 3, 4, 5];
+    
+    const result = arr.find((item) => {
+      return item % 2 === 0;
+    });
+    
+    console.log(result);
+    document.write(result + "<br>");
+    */
+    
+    /*
+    let userList = [
+      { name: "Mike", age: 30 },
+      { name: "Jane", age: 27 },
+      { name: "Tom", age: 10 },
+    ];
+    
+    const result = userList.filter((item) => {
+      if(item.age < 19) {
+        return true;
+      }
+      return false;
+    });
+    
+    console.log(result);
+    document.write(result + "<br>");
+    */
+    
+    /*
+    let userList = [
+      { name: "Mike", age: 30 },
+      { name: "Jane", age: 27 },
+      { name: "Tom", age: 10 },
+    ];
+    
+    let newUserList = userList.map((user, index) => {
+      return Object.assign({}, user, {
+        id: index + 1,
+        isAdult : user.age > 19,
+      });
+    });
+    
+    console.log(newUserList);
+    document.write(newUserList + "<br>");
+    console.log(userList);
+    document.write(userList + "<br>");
+    */
+    
+    /*
+    let arr = ["안녕", "나는", "철수야"];
+    
+    let result = arr.join("-");
+    
+    console.log(result);
+    document.write(result + "<br>");
+    */
+    
+    /*
+    const users = "Mike, Jane, Tom, Tony";
+    
+    const result = users.split(",");
+    
+    console.log(result);
+    document.write(result + "<br>");
+    */
+    
+    /*
+    let str = "Hello, My name is Mike";
+    
+    const result = str.split("");
+    
+    console.log(result);
+    document.write(result + "<br>");
+    */
+    
+    let user = {
+      name: "Mike",
+      age: 30,
+    };
+    
+    let userList = ["Mike", "Tom", "Jane"];
+    
+    console.log(typeof user);
+    document.write(typeof user + "<br>");
+    console.log(typeof userList);
+    document.write(typeof userList + "<br>");
+    console.log(Array.isArray(user));
+    document.write(Array.isArray(user) + "<br>");
+    console.log(Array.isArray(userList));
+    document.write(Array.isArray(userList) + "<br>");
   </script>
 </body>
 </html>

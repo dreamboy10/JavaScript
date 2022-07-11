@@ -263,6 +263,7 @@
     document.write(result + "<br>");
     */
     
+    /*
     let userList = [
       { name: "Mike", age: 30 },
       { name: "Tom", age: 10 },
@@ -281,6 +282,207 @@
     
     console.log(result);
     document.write(result + "<br>");
+    */
+    
+    /*
+    function add(...numbers) {
+      let result = numbers.reduce((prev, cur) => prev + cur);
+      console.log(result);
+      document.write(result + "<br>");
+    }
+    
+    add(1, 2, 3);
+    add(1, 2, 3, 4, 5, 6, 7, 8, 9, 10);
+    */
+    
+    /*
+    function User(name, age, ...skills) {
+      this.name = name;
+      this.age = age;
+      this.skills = skills;
+    }
+    
+    const user1 = new User('Mike', 30, 'html', 'css');
+    const user2 = new User('Mike', 20, 'Js', 'React');
+    const user3 = new User('Jane', 10, 'English');
+    console.log(user1);
+    document.write(user1 + "<br>");
+    console.log(user2);
+    document.write(user2 + "<br>");
+    console.log(user3);
+    document.write(user3 + "<br>");
+    */
+    
+    /*
+    let arr1 = [1, 2, 3];
+    let arr2 = [4, 5, 6];
+    
+    arr2.reverse().forEach((num) => {
+      arr1.unshift(num);
+    });
+    
+    arr1 = [...arr2, ...arr1];
+    
+    console.log(arr1);
+    document.write(arr1 + "<br>");
+    */
+    
+    /*
+    let user = { name: "Mike" };
+    let info = { age: 30 };
+    let fe = ["JS", "React"];
+    let lang = ["Korean", "English"];
+    
+    
+    user = Object.assign({}, user, info, {
+      skills: [],
+    });
+    
+    fe.forEach(item => {
+      user.skills.push(item);
+    });
+    lang.forEach(item => {
+      user.skills.push(item);
+    });
+    
+    user = {
+      ...user,
+      ...info,
+      skills: [...fe, ...lang],
+    };
+    
+    console.log(user);
+    document.write(user + "<br>");
+    */
+    
+    /*
+    function makeCounter() {
+      let num = 0;
+      
+      return function() {
+        return num++;
+      };
+    }
+    
+    let counter = makeCounter();
+    
+    console.log(counter());
+    console.log(counter());
+    console.log(counter());
+    document.write(counter() + "<br>");
+    document.write(counter() + "<br>");
+    document.write(counter() + "<br>");
+    */
+    
+    /*
+    let num = 0;
+    
+    function showTime() {
+      console.log(`안녕하세요. 접속하신지 ${num++}초가 지났습니다.`);
+      document.write(`안녕하세요. 접속하신지 ${num++}초가 지났습니다.` + "<br>");
+      
+      if(num > 5) {
+        clearInterval(tId);
+      }
+    }
+    
+    const tId = setInterval(showTime, 1000);
+    */
+    
+    const nums = [3, 10, 1, 6, 4];
+    // const minNum = Math.min(...nums);
+    // const maxNum = Math.max(...nums);
+    
+    /*
+    const minNum = Math.min.apply(null, nums);
+    const maxNum = Math.max.apply(null, nums);
+    */
+    
+    /*
+    const minNum = Math.min.call(null, ...nums);
+    const maxNum = Math.max.call(null, ...nums);
+    
+    console.log(minNum);
+    document.write(minNum + "<br>");
+    console.log(maxNum);
+    document.write(maxNum + "<br>");
+    */
+    
+    /*
+    const mike = {
+      name: "Mike",
+    };
+    
+    const tom = {
+      name: "Tom",
+    };
+    
+    function showThisName() {
+      console.log(this.name);
+      document.write(this.name + "<br>");
+    }
+    
+    showThisName();
+    showThisName.call(mike);
+    showThisName.call(tom);
+    
+    function update(birhYear, occupation) {
+      this.birhYear = birhYear;
+      this.occupation = occupation;
+    };
+    
+    update.call(mike, 1999, 'singer');
+    console.log(mike);
+    document.write(mike + "<br>");
+    
+    update.call(tom, 2002, 'teacher');
+    console.log(tom);
+    document.write(tom + "<br>");
+    
+    update.apply(mike, [1999, 'singer']);
+    console.log(mike);
+    document.write(mike + "<br>");
+    
+    update.apply(tom, [2002, 'teacher']);
+    console.log(tom);
+    document.write(tom + "<br>");
+    */
+    
+    /*
+    const mike = {
+      name: "Mike",
+    };
+    
+    function update(birthYear, occupation) {
+      this.birthYear = birthYear;
+      this.occupation = occupation;
+    }
+    
+    const updateMike = update.bind(mike);
+    
+    updateMike(1980, 'police');
+    console.log(mike);
+    document.write(mike + "<br>");
+    */
+    
+    const user = {
+      name: "Mike",
+      showName: function() {
+        console.log(`hello, ${this.name}`);
+        document.write(`hello, ${this.name}` + "<br>");
+      },
+    };
+    
+    user.showName();
+    
+    let fn = user.showName;
+    
+    fn.call(user);
+    fn.apply(user);
+    
+    let boundFn = fn.bind(user);
+    
+    boundFn();
   </script>
 </body>
 </html>
